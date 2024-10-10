@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Dark mode styles */
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+.dark .bg-white {
+  @apply bg-gray-800;
+}
+
+.dark .text-gray-800 {
+  @apply text-gray-200;
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-400;
+}
+
+.dark .border-gray-300 {
+  @apply border-gray-600;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  @apply bg-gray-700 text-white border-gray-600;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  @apply text-gray-400;
+}
+
+.dark .shadow-md {
+  @apply shadow-gray-700;
+}
+
+/* Ensure text readability in dark mode for specific components */
+.dark .bg-white.p-4.rounded-lg.shadow,
+.dark .bg-white.shadow-md.rounded-lg.p-6,
+.dark .bg-white.p-6.rounded-lg.shadow-md {
+  @apply text-gray-200;
+}
+
+/* Adjust button styles for better visibility in dark mode */
+.dark .bg-primary-500 {
+  @apply bg-primary-600;
+}
+
+.dark .hover\:bg-primary-600:hover {
+  @apply hover:bg-primary-700;
+}
+
+/* Ensure form labels are visible in dark mode */
+.dark label {
+  @apply text-gray-200;
+}
